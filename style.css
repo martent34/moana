@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+* {
+    text-decoration: none !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: "Caveat", cursive;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #4169E1 !important;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    background-color: #4169E1;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+#heart-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1111;
+}
+
+.heart {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    transform: rotate(45deg);
+    animation: float 3s ease-in-out forwards;
+    z-index: 1111;
+}
+
+.heart::before,
+.heart::after {
+    z-index: 1111;
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -5px;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    left: -5px;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(45deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-200px) rotate(45deg);
+        opacity: 0;
+    }
+}
+
+
+.text {
+    width: 400px;
+    height: 100px;
+    background-color: #36b6c7;
+    direction: ltr;
+    margin: auto;
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+}
+
+.button {
+    padding: 7px 40px;
+    background-color: #00000012;
+    border-radius: 10px;
+    color: white;
+    margin-top: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.664);
+}
+
+.button:hover {
+    animation: scale 1s infinite;
+}
+
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.05);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+}
+
+.lets-text {
+    text-align: center;
+    margin: 20px auto;
+    color: #fff;
+    width: 40%;
+    height: auto;
+    background-color: #00000012;
+    /* box-shadow: 0px 0px 18px 1px #00e2ff; */
+    animation: breath 2s infinite;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+@keyframes breath {
+    0% {
+        box-shadow: 0px 0px 18px 0px #00e2ff;
+    }
+
+    25% {
+        box-shadow: 0px 0px 10px 0px #00e2ff;
+    }
+
+    50% {
+        box-shadow: 0px 0px 5px 0px #00e2ff;
+    }
+
+    75% {
+        box-shadow: 0px 0px 1px 0px #00e2ff;
+    }
+
+    100% {
+        box-shadow: 0px 0px 18px 0px #00e2ff;
+    }
+}
+
+.input {
+    width: 200px;
+    height: 40px;
+    background-color: #00000012;
+    border: 1px solid #fff;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+    display: block;
+}
+
+.lablel {
+    color: white;
+    font-size: 20px;
+    display: block;
+}
+
+.img {
+    /* width: 49%; */
+    height: 500px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.blur {
+    filter: blur(30px);
+}
+
+.next {
+    padding: 8px 45px;
+    background-color: green;
+    color: white;
+    font-size: 18px;
+    transition: all 0.5s;
+    border-radius: 10px;
+}
+
+.next:hover {
+    opacity: 0.8;
+    transition: all 0.5s;
+}
+
+.none,
+.nonee {
+    display: none;
+}
+
+.danger {
+    background-color: red !important;
+}
+
+.error-link {
+    padding: 5px 45px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.288);
+    color: white;
+    font-size: 20px;
+}
+
+.ww {
+    width: 60%;
+}
+
+#confirmButton{
+    border: none;
+    padding: 5px 40px;
+    border-radius: 10px;
+    margin-top: 20px;
+    background-color: #00000012;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 576px) {
+    .lets-text {
+        width: 90% !important;
+    }
+
+    .img {
+        width: 97%;
+    }
+
+    .next {
+        margin-top: 30px;
+    }
+}
